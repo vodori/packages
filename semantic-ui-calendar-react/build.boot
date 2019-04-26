@@ -8,7 +8,7 @@
 (def +version+ (str +lib-version+ "-0"))
 
 (task-options!
-  pom {:project     'cljsjs/semantic-ui-react
+  pom {:project     'cljsjs/semantic-ui-calendar-react
        :version     +version+
        :description "Datepicker react component based on semantic-ui-react components"
        :url         "https://github.com/arfedulov/semantic-ui-calendar-react"
