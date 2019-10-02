@@ -5,7 +5,7 @@
  * and values used as constants are clarified.
  **********************************************************************/
 var lunr = function(config){};
-lunr.version = "2.1.5";
+lunr.version = "2.3.6";
 
 lunr.Builder = function(){};
 lunr.FieldRef = function(docRef, fieldName, stringValue){};
@@ -59,14 +59,6 @@ lunr.TokenSet.fromClause = function(clause){};
 lunr.TokenSet.fromFuzzyString = function(str, editDistance){};
 lunr.TokenSet.fromString = function(str){};
 lunr.Vector = function (elements){};
-lunr.Vector.toArray = function (elements){};
-lunr.Vector.toJSON = function (elements){};
-lunr.Vector.similarity = function(otherVector){};
-lunr.Vector.dot = function(otherVector){};
-lunr.Vector.magnitude = function(){};
-lunr.Vector.upsert = function(insertIdx, val, fn){};
-lunr.Vector.insert = function(insertIdx, val){};
-lunr.Vector.positionForIndex = function(index){};
 lunr.generateStopWordFilter = function(stopWords){};
 lunr.idf = function(posting, documentCount){};
 lunr.stemmer = function(token){};
@@ -88,7 +80,7 @@ lunr.Builder.prototype = {
   "calculateAverageFieldLengths": function () {},
   "createFieldVectors": function () {},
   "createTokenSet": function () {},
-  "field": function (field) {},
+  "field": function (field, options) {},
   "k1": function (number) {},
   "ref": function (ref) {},
   "use": function (fn) {}
@@ -151,6 +143,16 @@ lunr.TokenSet.Builder.prototype = {
   "finish": function () {},
   "insert": function (word) {},
   "minimize": function (downTo) {}
+};
+lunr.Set.prototype = {
+    "toArray": function (elements){},
+    "toJSON": function (elements){},
+    "similarity": function(otherVector){},
+    "dot": function(otherVector){},
+    "magnitude": function(){},
+    "upsert": function(insertIdx, val, fn){},
+    "insert": function(insertIdx, val){},
+    "positionForIndex": function(index){}
 };
 lunr.Vector.prototype = {
   "dot": function (otherVector) {},
