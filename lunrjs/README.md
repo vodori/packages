@@ -4,7 +4,7 @@ This is a cljsjs package for https://github.com/olivernn/lunr.js
 
 [](dependency)
 ```clojure
-[cljsjs/lunrjs "2.1.5-1"] ;; latest release
+[cljsjs/lunrjs "2.3.6"] ;; latest release
 ```
 [](/dependency)
 
